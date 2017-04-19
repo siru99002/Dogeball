@@ -11,6 +11,10 @@ namespace dodgeballs
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Texture2D pixel; // Skapar bollen
+        Rectangle ball = new Rectangle(100, 100, 20, 20); 
+        int x_speed = 3;
+        int y_speed = 3;
 
         public Game1()
         {
@@ -39,7 +43,7 @@ namespace dodgeballs
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            pixel = Content.Load<Texture2D>("pixel.png"); // Laddar in bilden och ritar upp den i programmet //
             // TODO: use this.Content to load your game content here
         }
 
