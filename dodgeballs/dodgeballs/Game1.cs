@@ -12,7 +12,7 @@ namespace dodgeballs
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Texture2D pixel; // Skapar bollen
-        Rectangle ball = new Rectangle(100, 100, 20, 20); 
+        Rectangle ball = new Rectangle(100, 100, 20, 20); //
         int x_speed = 3;
         int y_speed = 3;
 
@@ -65,6 +65,7 @@ namespace dodgeballs
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            
 
             // TODO: Add your update logic here
 
@@ -77,11 +78,15 @@ namespace dodgeballs
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Draw(pixel, ball, Color.White);
+            spriteBatch.End(); //globe när du ska lägga till saker den ska rita upp så måste spritebatch.End vara sist!!
 
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+            spriteBatch.Draw(pixel, ball, Color.White);
+            spriteBatch.End();
         }
     }
 }
