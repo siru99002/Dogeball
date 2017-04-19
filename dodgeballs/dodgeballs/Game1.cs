@@ -75,7 +75,7 @@ namespace dodgeballs
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here HEJ
+            // TODO: Add your drawing code here
 
             base.Draw(gameTime);
         }
